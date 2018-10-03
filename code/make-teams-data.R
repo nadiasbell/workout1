@@ -7,6 +7,7 @@
 ##################################################
   
 library(dplyr)
+library(readr)
   
 #set working directory 
 
@@ -47,3 +48,12 @@ teams <- summarise(group_by(nba2018, team), experience = sum(experience), salary
 teams
 str(nba2018)
        
+#send R output of summary on teams
+
+sink("../output/teams-summary.txt")
+summary(teams)
+sink()
+
+#write teams table to a csv 
+
+write.csv(teams, file = '../data/nba2018-teams.csv')
