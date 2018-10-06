@@ -2,8 +2,8 @@
   ##################################################
 ## Title: NBA Team Table
 ## Description: Make Table for Ranking Analysis
-## Input(s): NBA plater data table
-## Output(s):
+## Input(s): NBA player data table
+## Output(s): NBA team table and summary
 ##################################################
   
 library(dplyr)
